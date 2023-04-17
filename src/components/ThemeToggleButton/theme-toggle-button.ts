@@ -44,7 +44,7 @@ export class ThemeToggleButton extends LitElement {
     if (localStorageTheme !== null) {
       this._setTheme(localStorageTheme);
     } else {
-      this._setTheme('light');
+      this._setTheme('dark');
     }
   }
 

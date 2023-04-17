@@ -1,7 +1,7 @@
 export const settings = {
-  site: 'https://simple-blog.littlesticks.dev',
-  name: 'Simple Blog',
-  title: 'Site title',
-  description: 'Site description',
-  showLittleSticksPlug: true,
+  site: 'https://avunite.com',
+  name: '/.vunite',
+  title: 'Avunite',
+  description: 'Advanced Ai for the people',
+  showLittleSticksPlug: false,
 }
