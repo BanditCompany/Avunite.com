@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Page.astro'
+import Container from '../components/Container.astro';
+
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf()
+);
+
+const seo = {
+  title: '/.vunite',
+  description: 'Advanced Ai for the people',
+}
+---
+
+<style>
+  .home-hero-text__container {
+    padding: 5vh 0;
+  }
+  h1, h2 {
+    text-align: center;
+  }
+</style>
+
+<Layout seo={seo}>
+  <Container>
+    <div class="home-hero-text__container">
+      <h1 class="fade-in">/.vunite Studios</h1>
+      <h2 class="fade-in">Coming soon</h2>
+    </div>
+  </Container>
+</Layout>
+

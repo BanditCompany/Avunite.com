@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Arial Custom';
+  src: url('/fonts/ARIAL.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial Custom';
+  src: url('/fonts/ARIALBD.TTF') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   /* Colors */
   --theme-primary: hsl(0, 0%, 5%);
@@ -28,8 +42,8 @@
   --step-4: clamp(2.33rem, calc(1.81rem + 2.59vw), 3.66rem);
   --step-5: clamp(2.80rem, calc(2.11rem + 3.47vw), 4.58rem);
 
-  --font-family-heading: '', sans-serif;
-  --font-family-body: 'Open Sans', sans-serif;
+  --font-family-heading: 'Arial Bold', 'Arial', sans-serif;
+  --font-family-body: 'Arial', 'Helvetica', sans-serif;
 
   --body-max-width: 1920px;
 

@@ -10,39 +10,69 @@ import SocialList from './SocialList.astro';
       <a class="header__logo" href="/" title="Navigate Home">
         <Logo />
       </a>
-      <SocialList />
+      <div class="nav__right">
+        <SocialList />
+        <div class="theme-toggle__container">
+          <theme-toggle-button></theme-toggle-button>
+        </div>
+      </div>
     </nav>
   </Container>
-  <div class="theme-toggle__container">
-    <!-- I was running into some issues with the Lit integration so I'm using it as a client script for now -->
-    <theme-toggle-button></theme-toggle-button>
-  </div>
 </header>
 
 <style>
+  @font-face {
+    font-family: 'Arial Custom';
+    src: url('/fonts/ARIAL.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Arial Custom';
+    src: url('/fonts/ARIALBD.TTF') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
   header {
     height: var(--theme-header-height, 64px);
-    display: flex;
-    align-items: center;
     border-bottom: 1px solid var(--theme-primary-light);
   }
+
   nav {
-    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .header__logo {
     display: flex;
     align-items: center;
+    height: 100%;
     margin: 0;
+    font-family: 'Arial Custom', Arial, sans-serif;
+    font-weight: bold;
   }
+
+  .header__logo :global(svg) {
+    height: 100%;
+    max-height: 40px; /* Adjust this value as needed */
+    width: auto;
+  }
+
+  .nav__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
   .theme-toggle__container {
     margin-left: 1rem;
-    position: relative;
-    right: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
 </style>
